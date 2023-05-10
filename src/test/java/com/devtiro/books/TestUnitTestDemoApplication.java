@@ -1,13 +1,13 @@
-package com.devtiro.books.Devtiro.Unit.Test.Demo;
+package com.devtiro.books;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DevtiroUnitTestDemoApplicationTests {
+public class TestUnitTestDemoApplication {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }

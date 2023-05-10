@@ -1,13 +1,13 @@
-package com.devtiro.books.Devtiro.Unit.Test.Demo;
+package com.devtiro.books;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DevtiroUnitTestDemoApplication {
+public class UnitTestDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevtiroUnitTestDemoApplication.class, args);
+		SpringApplication.run(UnitTestDemoApplication.class, args);
 	}
 
 }
