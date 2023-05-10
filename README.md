@@ -23,6 +23,7 @@ Here are the available branches:
 | Branch name   | Description                                          |
 | -----------   | -----------                                          |
 | `fresh`       | A fresh download from the Spring Boot initilzr       |
+| `pretests`    | A working app, but no tests. A red build.            |
 
 ## Code Coverage
 Generate code coverage reports with:
