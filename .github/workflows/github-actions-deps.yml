@@ -1,7 +1,8 @@
 name: Update Dependencies
 
-schedule:
-  - cron:  '0 1 * * *'
+on:
+  schedule:
+    - cron:  '0 1 * * *'
 
 jobs:
   build:
