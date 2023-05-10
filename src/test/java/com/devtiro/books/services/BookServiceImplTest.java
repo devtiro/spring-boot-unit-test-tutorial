@@ -37,12 +37,26 @@ public class BookServiceImplTest {
     public void testThatListBooksReturnsFromRepository() {
         final Pageable pageable = Mockito.mock(Pageable.class);
         final Page<Book> findAllResult = new PageImpl<>(
-                List.of(TestDataUtil.createTestBook()),
+                List.of(TestDataUtil.createTestBookA()),
                 pageable, 1);
 
         when(bookRepository.findAll(eq(pageable))).thenReturn(findAllResult);
         final Page<Book> listBooksResult = underTest.listBooks(pageable);
         assertThat(listBooksResult).isEqualTo(findAllResult);
+    }
+
+    @Test
+    public void testThatGetBookWithYoungestAuthorReturnsYoungestAuthor() {
+        final Book expected = TestDataUtil.createTestBookB();
+
+        final Iterable<Book> bookIterable = List.of(
+            TestDataUtil.createTestBookA(),
+            expected
+        );
+        when(bookRepository.findAll()).thenReturn(bookIterable);
+
+        final Book result = underTest.getBookWithYoungestAuthor();
+        assertThat(result).isEqualTo(expected);
     }
 
 }

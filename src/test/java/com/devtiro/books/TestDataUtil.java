@@ -8,7 +8,7 @@ import com.devtiro.books.domain.Book;
  */
 public final class TestDataUtil {
 
-    public static Book createTestBook() {
+    public static Book createTestBookA() {
         return Book.builder()
         .isbn("111-1-2345-6780-4")
         .title("Some Book")
@@ -16,6 +16,18 @@ public final class TestDataUtil {
                 .id(1L)
                 .name("John Doe")
                 .age(50)
+                .build())
+        .build();
+    }
+
+    public static Book createTestBookB() {
+        return Book.builder()
+        .isbn("222-2-3456-6780-4")
+        .title("Some Other Book")
+        .author(Author.builder()
+                .id(1L)
+                .name("Jane Doe")
+                .age(35)
                 .build())
         .build();
     }

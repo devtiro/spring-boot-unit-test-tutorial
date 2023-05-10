@@ -9,4 +9,6 @@ public interface BookService {
 
     Page<Book> listBooks(Pageable pagable);
 
+    Book getBookWithYoungestAuthor();
+
 }

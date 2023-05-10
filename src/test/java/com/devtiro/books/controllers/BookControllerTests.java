@@ -38,7 +38,7 @@ public class BookControllerTests {
     public void testThatListBooksReturnsHttp200() {
         final Pageable pageable = Mockito.mock(Pageable.class);
         final Page<Book> listBooksResult = new PageImpl<>(
-            List.of(TestDataUtil.createTestBook()),
+            List.of(TestDataUtil.createTestBookA()),
             pageable, 1
         );
 
@@ -53,7 +53,7 @@ public class BookControllerTests {
     public void testThatListBooksReturnsBooks() {
         final Pageable pageable = Mockito.mock(Pageable.class);
         final Page<Book> listBooksResult = new PageImpl<>(
-            List.of(TestDataUtil.createTestBook()),
+            List.of(TestDataUtil.createTestBookA()),
             pageable, 1);
 
         when(bookService.listBooks(eq(pageable))).thenReturn(listBooksResult);
