@@ -58,6 +58,24 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<!-- Spotless auto formatting -->
+			<plugin>
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>2.36.0</version>
+				<configuration>
+					<formats>
+						<format>
+							<trimTrailingWhitespace/>
+							<endWithNewline/>
+							<indent>
+								<tabs>true</tabs>
+								<spacesPerTab>2</spacesPerTab>
+							</indent>
+						</format>
+					</formats>
+				</configuration>
+			</plugin>
 			<!-- Jacoco Test Code Coverage -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
@@ -100,8 +118,10 @@
 								</rule>
 							</rules>
 							<excludes>
-								<!-- Exclude main class  -->
+								<!-- Exclude main class -->
 								<exclude>com/devtiro/books/UnitTestDemoApplication.class</exclude>
+								<!-- Exclude domain classes -->
+								<exclude>com/devtiro/books/domain/**</exclude>
 							</excludes>
 						</configuration>
 					</execution>
