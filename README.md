@@ -18,7 +18,7 @@ To checkout a branch run the following:
     git checkout ${TAG_NAME}
 ```
 
-Here are the available branches:
+Here are the available tags:
 
 | Branch name   | Description                                          |
 | -----------   | -----------                                          |
