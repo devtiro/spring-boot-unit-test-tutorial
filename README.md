@@ -5,12 +5,12 @@
 The tutorial's YouTube video can be found [here](#).
 
 
-## Branches
-Branches have been used to snapshot the project at certain points in time.
+## Tags
+Tags have been used to snapshot the project at certain points in time.
 
 To checkout a branch run the following:
 ```shell
-    git checkout ${BRANCH_NAME}
+    git checkout ${TAG_NAME}
 ```
 
 Here are the available branches:
