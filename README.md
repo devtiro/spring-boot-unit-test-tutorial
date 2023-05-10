@@ -24,6 +24,7 @@ Here are the available branches:
 | -----------   | -----------                                          |
 | `fresh`       | A fresh download from the Spring Boot initilzr       |
 | `pretests`    | A working app, but no tests. A red build.            |
+| `passthrough` | A working app, with mocked passthrough tests.        |
 
 ## Code Coverage
 Generate code coverage reports with:
