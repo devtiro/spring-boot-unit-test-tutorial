@@ -36,9 +36,6 @@ public class BookServiceImpl implements BookService {
     public Book getBookWithYoungestAuthor() {
         return StreamSupport.stream(bookRepository.findAll().spliterator(), false)
             .sorted((thisBook, thatBook) -> {
-                if(null == thisBook.getAuthor() && null == thatBook.getAuthor()) {
-                    return 0;
-                }
                 if(getAuthorAgeOrThrow(thisBook) == getAuthorAgeOrThrow(thatBook)) {
                     return 0;
                 }

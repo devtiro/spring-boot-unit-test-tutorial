@@ -51,12 +51,14 @@ public class BookServiceImplTest {
 
         final Iterable<Book> bookIterable = List.of(
             TestDataUtil.createTestBookA(),
-            expected
+            TestDataUtil.createTestBookA(),
+            expected,
+            TestDataUtil.createTestBookC()
         );
         when(bookRepository.findAll()).thenReturn(bookIterable);
 
         final Book result = underTest.getBookWithYoungestAuthor();
-        assertThat(result).isEqualTo(expected);
+        assertThat(result).isNotNull().isEqualTo(expected);
     }
 
 }

@@ -32,6 +32,18 @@ public final class TestDataUtil {
         .build();
     }
 
+    public static Book createTestBookC() {
+        return Book.builder()
+        .isbn("333-3-45678-6780-4")
+        .title("Some Other Other Book")
+        .author(Author.builder()
+                .id(1L)
+                .name("Jerimiah Doe")
+                .age(60)
+                .build())
+        .build();
+    }
+
     /**
      * Private constructor as a utility class
      */
