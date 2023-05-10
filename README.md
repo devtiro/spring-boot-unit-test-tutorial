@@ -25,6 +25,7 @@ Here are the available tags:
 | `fresh`       | A fresh download from the Spring Boot initilzr       |
 | `pretests`    | A working app, but no tests. A red build.            |
 | `passthrough` | A working app, with mocked passthrough tests.        |
+| `withtests`   | A working app, with unit tests.                      |
 
 ## Code Coverage
 Generate code coverage reports with:
