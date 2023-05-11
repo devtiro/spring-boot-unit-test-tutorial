@@ -10,24 +10,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Entity which models a book.
- */
+/** Entity which models a book. */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name="books")
+@Table(name = "books")
 public class Book {
 
-    @Id
-    private String isbn;
+  @Id private String isbn;
 
-    private String title;
+  private String title;
 
-    @ManyToOne
-    @JoinColumn(name="author_id")
-    private Author author;
-
+  @ManyToOne
+  @JoinColumn(name = "author_id")
+  private Author author;
 }

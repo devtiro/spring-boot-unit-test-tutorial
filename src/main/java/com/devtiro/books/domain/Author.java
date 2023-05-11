@@ -8,21 +8,18 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Entity which models a {@link Book book's} author.
- */
+/** Entity which models a {@link Book book's} author. */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name="authors")
+@Table(name = "authors")
 public class Author {
 
-    @Id
-    private Long id;
+  @Id private Long id;
 
-    private String name;
+  private String name;
 
-    private Integer age;
+  private Integer age;
 }
