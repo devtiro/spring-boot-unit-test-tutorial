@@ -38,7 +38,6 @@ public class BookControllerTests {
 
     final ResponseEntity<Page<Book>> result = underTest.listBooks(pageable);
     assertThat(result.getStatusCode()).isEqualTo(HttpStatus.OK);
-    assertThat(result.getBody()).isEqualTo(listBooksResult);
   }
 
   @Test

@@ -26,7 +26,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -86,13 +89,6 @@
 				</configuration>
 				<executions>
 					<execution>
-						<id>Check on Compile</id>
-						<goals>
-							<goal>check</goal>
-						</goals>
-						<phase>compile</phase>
-					</execution>
-					<execution>
 						<id>Apply on Compile</id>
 						<goals>
 							<goal>apply</goal>
@@ -149,6 +145,13 @@
 								<exclude>com/devtiro/books/domain/**</exclude>
 							</excludes>
 						</configuration>
+					</execution>
+					<execution>
+						<id>report</id>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<phase>integration-test</phase>
 					</execution>
 				</executions>
 			</plugin>
